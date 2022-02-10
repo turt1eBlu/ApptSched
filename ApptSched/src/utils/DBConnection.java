@@ -13,20 +13,20 @@ public class DBConnection {
     //JDBC URL parts
     private static final String PROTOCOL = "jdbc";
     private static final String VENDOR_NAME = ":mysql:";
-    private static final String IP_ADDRESS = "//wgudb.ucertify.com:3306/";
-    private static final String DB_NAME = "WJ03VQ8";
-    private static final String TIMEZONE = "?connectionTimeZone=SERVER";
+    private static final String IP_ADDRESS = "";
+    private static final String DB_NAME = "";
+    private static final String TIMEZONE = "";
     
     //JBDC URL
     private static final String JDBC_URL = PROTOCOL + VENDOR_NAME + IP_ADDRESS + DB_NAME + TIMEZONE;
     
     //driver and connection interface reference
-    private static final String MYSQL_JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String MYSQL_JDBC_DRIVER = "";
     private static Connection conn = null;
    
     //user name and password
-    private static final String USER_NAME = "U03VQ8";
-    private static final String PASSWORD = "53688093320";
+    private static final String USER_NAME = "";
+    private static final String PASSWORD = "";
     
     /**
      * Creates a connection with the database.
