@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="401.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApptViewScreenController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="401.0" prefWidth="988.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="163.0" text="Appointments">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="726.0" spacing="20.0">
+               <children>
+                  <RadioButton fx:id="AllRBtn" mnemonicParsing="false" onAction="#OnActionViewAll" selected="true" text="View All">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ViewGrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="MonthRBtn" mnemonicParsing="false" onAction="#OnActionViewMonth" text="View byMonth" toggleGroup="$ViewGrp" />
+                  <RadioButton fx:id="WeekRbtn" mnemonicParsing="false" onAction="#OnActionViewWeek" prefHeight="17.0" prefWidth="103.0" text="View by Week" toggleGroup="$ViewGrp" />
+                  <DatePicker fx:id="CalendarPkr" onAction="#OnActionFilterAppts" />
+               </children>
+            </HBox>
+            <TableView fx:id="ApptTbl" prefHeight="232.0" prefWidth="950.0">
+              <columns>
+                <TableColumn fx:id="ApptIdCol" prefWidth="50.0" text="Appt ID" />
+                <TableColumn fx:id="ApptTitleCol" prefWidth="100.0" text="Title" />
+                <TableColumn fx:id="ApptDescCol" prefWidth="99.0" text="Description" />
+                <TableColumn fx:id="ApptLocCol" prefWidth="85.0" text="Location" />
+                <TableColumn fx:id="ApptContCol" prefWidth="53.0" text="Contact" />
+                <TableColumn fx:id="ApptTypeCol" prefWidth="104.0" text="Type" />
+                <TableColumn fx:id="ApptStartCol" prefWidth="200.0" text="Start" />
+                <TableColumn fx:id="ApptEndCol" prefWidth="200.0" text="End" />
+                <TableColumn fx:id="ApptCustIdCol" minWidth="7.0" prefWidth="78.0" text="Cust_ID" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="766.0" spacing="30.0">
+               <children>
+                  <Button fx:id="ApptAddBtn" mnemonicParsing="false" onAction="#OnActionAddAppt" text="Add" />
+                  <Button fx:id="ApptEditBtn" mnemonicParsing="false" onAction="#OnActionEditAppt" text="Edit" />
+                  <Button fx:id="ApptDelBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OnActionDeleteAppt" text="Delete" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="24.0" prefWidth="766.0">
+               <children>
+                  <Button fx:id="ReturnBtn" mnemonicParsing="false" onAction="#OnActionReturnToMain" text="Return to Main Menu" />
+               </children>
+               <VBox.margin>
+                  <Insets right="40.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
