@@ -4,7 +4,7 @@ Title: ApptSched
 
 Purpose: The ApptSched program implements GUI-based desktop scheduling application.  Appointments are stored in a MySQL database set up using the structure in the DatabaseERD PDF file.  DBConnection file requires modification to use local db. 
 
-Author: Jennifer Pillow 
+Author: turt1eBlu 
 Email: pillje@hotmail.com
 
 Version: 1.17
